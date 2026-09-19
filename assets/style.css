@@ -102,6 +102,11 @@ main h2 {
   border-top: 1px solid #e2e2e2;
 }
 
+main h3 {
+  font-size: 1.05rem;
+  margin: 1.4rem 0 0.4rem;
+}
+
 main ul { margin: 0.5rem 0 1rem; padding-left: 1.4rem; }
 
 main ul li { margin: 0.3rem 0; }
