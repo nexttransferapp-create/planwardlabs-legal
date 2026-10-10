@@ -2,11 +2,11 @@ Planward Labs
 
 Next Transfer Privacy Policy
 
-Effective Date: October 6, 2026 [UPDATED]
-Last Updated: October 6, 2026 [UPDATED]
+Effective Date: October 11, 2026 [UPDATED]
+Last Updated: October 11, 2026 [UPDATED]
 Developer: Planward Labs
 Application: Next Transfer for Android (com.nexttransfer.rmplanner)
-Applies to: the current closed-beta release, version 0.2.3 [UPDATED]
+Applies to: the current closed-beta release, version 0.2.5 [UPDATED]
 Privacy & Support: next.transfer.app@gmail.com
 
 Next Transfer is an independent app. It is not made, endorsed, or supported by The Church of Jesus Christ of Latter-day Saints.
@@ -27,40 +27,47 @@ Planward Labs does not sell your information.
 Next Transfer can request optional access to contacts, location, and notifications for specific features you choose to use. Each is requested only when the related feature is used.
 Backup & Restore lets you create a copy of your Next Transfer data and save it to a location you choose. Portable backup files are not encrypted — see Section 7.
 Your MPIN, your app-lock settings and your sign-in tokens never leave your device and are never included in backups or Sync (Section 12).
-Quick Notes stay on your device only. They are never synced or backed up, and are deleted automatically after 10 days (Section 3).
-[NEW] The temple map is built into the app. Choosing which temples to show uses your location only on your device (Section 4.2).
-[NEW] Next Transfer asks Google Play whether a newer version is available so it can offer to update (Section 10).
+[UPDATED] Notes are now kept like your Journal. They are no longer deleted after 10 days, and they are included in your backups (Section 3).
+The temple map is built into the app. Choosing which temples to show uses your location only on your device (Section 4.2).
+Next Transfer asks Google Play whether a newer version is available so it can offer to update (Section 10).
+[NEW] Next Transfer Pro is an optional subscription bought through Google Play. Google Play handles the payment; Planward Labs never receives your card or payment details. To give you Pro, our server checks your purchase with Google Play and keeps a small record of your plan (Section 9.1).
 
 3. Information You Enter
 
 Depending on which features you use, you may enter or create the following information inside Next Transfer:
 
-an optional local profile or display name
+an optional local profile or display name [UPDATED: including the name you give when the app asks "What should we call you?"]
+[NEW] optional My Companion details: your role, phone number and email address
 tasks, including due dates, times, priorities, status, and completion history
-calendar events, including repeating-event and exception data, and [UPDATED] the temple you choose for a Temple Visit event
+calendar events, including repeating-event and exception data, and the temple you choose for a Temple Visit event
 goals, goal activities, achievement history, and progress entries
 weekly plans and planning targets
 outcome reports and activity history
 contacts, including names, phone numbers, email addresses, social profile usernames, notes, groups, tags, and availability
 saved places and map coordinates
 journal entries you write, including entries you save from an Event's notes
-quick notes (a title or name and a short note)
+[UPDATED] notes (a title and text, with optional pins and an archive)
 reminder and notification preferences
 privacy and appearance preferences
 application settings and first-run progress
 
 Where it is stored: in a private SQLite database and private application storage belonging to Next Transfer on your device. This information stays on your device unless you turn on Google Sync, in which case a copy is stored in the cloud as described in Section 9.
 
-Quick Notes. Quick Notes are kept only in Next Transfer's private storage on the device where you wrote them. They are never included in backups or Google Sync, and each Quick Note is deleted automatically 10 days after it was written. You can delete them sooner at any time. When you convert a Quick Note into a contact, event, or task, the record you save is handled like any other record of that type.
+[UPDATED] Notes. Notes (formerly Quick Notes) are kept until you delete them, like your Journal. They are included in the backups you create (Section 7). On the Pro plan they are also included in Google Sync; on the Free plan they are not (Section 9). When you convert a note into a contact, event, or task, the record you save is handled like any other record of that type.
 
-On-device display settings. [UPDATED] Next Transfer keeps a few small display settings on your device, such as:
+[NEW] My Companion details. The role, phone number and email address you enter in My Companion are kept in Next Transfer's private storage on this phone only. They are not included in backups or Google Sync, and they are not shared with anyone. (Companion Sync, which would share them with one person you choose, is not available yet; this policy will be updated before it is.)
+
+On-device display settings. [UPDATED] Next Transfer keeps a few small settings on your device, such as:
 
 which Home sections you collapsed;
 the order and number of Life Goals shown on Home;
 which Guides tips you have completed;
-your temple map choices (show temples, which region, include temples in search).
+your temple map choices (show temples, which region, include temples in search);
+[NEW] your Pro look choices for Life Goal cards;
+[NEW] whether the weekly backup reminder is on, and the date of the last backup made on this phone;
+[NEW] which in-app messages you have read.
 
-They contain no personal content and are never synced or backed up.
+They contain no planner content and are never synced or backed up.
 
 4. Information Next Transfer Accesses From Your Device
 
@@ -84,19 +91,20 @@ Android may allow you to grant approximate location only, even when precise loca
 Next Transfer does not request background location permission and does not track your location in the background.
 Your current location is used to perform the action you asked for. It is not automatically converted into a saved location unless you separately choose to save it.
 Coordinates you deliberately save or associate with a record are stored locally inside Next Transfer.
-[NEW] Temple map. Next Transfer includes a built-in list of temple locations. To show temples in your country or nearby, and to list your country's temples first when you choose a temple for an event, the app compares your device location with that list on your phone. Your location is not sent to Planward Labs or anyone else for this. If location access is not allowed, the app uses the area you are viewing on the map instead.
+Temple map. Next Transfer includes a built-in list of temple locations. To show temples in your country or nearby, and to list your country's temples first when you choose a temple for an event, the app compares your device location with that list on your phone. Your location is not sent to Planward Labs or anyone else for this. [UPDATED] If location access is not allowed, the app uses the region you chose instead.
 
 5. Device Permissions
 
-The current Android version of Next Transfer declares seven permissions, each tied to a specific feature:
+[UPDATED] The current Android version of Next Transfer declares the following permissions, each tied to a specific feature:
 
-Internet: load Google Maps map content, sign in with Google, run Google Sync when you turn it on, and [UPDATED] check Google Play for app updates.
+Internet: load Google Maps map content, sign in with Google, run Google Sync when you turn it on, check Google Play for app updates, and [UPDATED] verify a Pro purchase.
 Contacts: import device contacts when you choose to use the import feature.
-Approximate and precise location: foreground location for user-initiated actions such as Locate me, and to choose which temples to show on the map. No background location. [UPDATED]
+Approximate and precise location: foreground location for user-initiated actions such as Locate me, and to choose which temples to show on the map. No background location.
 Notifications: display local reminders and notifications on Android versions that require permission.
 Biometric/device authentication: support the optional Biometrics app lock, and confirm it is you when resetting a forgotten MPIN, through your device's own authentication.
 Network state: respect the "Wi-Fi only" Sync setting by checking whether you are on Wi-Fi or mobile data.
 Boot completion and background work: restore eligible local reminder schedules after your device restarts or the clock or time zone changes, and run the optional nightly Google Sync while the app is closed.
+[NEW] Google Play billing: buy, change or restore a Next Transfer Pro subscription through Google Play.
 
 Next Transfer does not request broad storage access. Saving a backup on supported Android versions happens without any storage permission (see Section 7).
 
@@ -107,16 +115,17 @@ Permission-dependent features are designed to fail softly: declining an optional
 6. Notifications and Reminders
 
 Next Transfer schedules local reminders for supported features such as events, tasks, goals, reviews, and follow-up activities.
+[NEW] Next Transfer can also remind you to plan your monthly temple visit, and, if you turn it on in Local Backup & Restore, remind you weekly to make a backup when none was made on this phone in the past week. The backup reminder only reminds you; it never makes, exports or uploads a backup by itself.
 Reminders are scheduled and delivered by the application and Android system services on your device. The current version does not use a remote push-notification server.
 Next Transfer may use Android background scheduling and boot-completion capability to keep eligible reminder schedules working after a restart.
 Depending on your Next Transfer privacy settings and your Android lock-screen settings, a notification may show information derived from your planner records. Next Transfer provides a privacy setting to hide notification content.
 You can control notification permission through Android settings and adjust reminder preferences inside Next Transfer.
 In-app update messages shown inside Next Transfer (for example, release notes for a new beta version) are ordinary application screens. They do not require notification permission and do not produce system notifications.
-[NEW] When a newer version is available on Google Play, Next Transfer shows an in-app prompt to update now or install later. This is an ordinary application screen, not a system notification.
+When a newer version is available on Google Play, Next Transfer shows an in-app prompt to update now or install later. This is an ordinary application screen, not a system notification.
 
 7. Backup & Restore
 
-Backup & Restore is a user-initiated feature introduced in the current beta. It is designed so that you keep control of your own data.
+Backup & Restore is a user-initiated feature. It is designed so that you keep control of your own data.
 
 What a backup contains. A backup contains the persistent Next Transfer data for your profile, including:
 
@@ -124,9 +133,10 @@ your planner records (tasks, calendar events, goals, weekly plans);
 outcome reports and activity history;
 contacts and contact details;
 saved places;
+[UPDATED] your journal entries and notes;
 your preferences (including reminder, notification, privacy, and appearance settings).
 
-Device-specific items that cannot meaningfully be restored on another device are excluded: Android permission grants, notification scheduling artifacts, first-run progress, your app-lock settings, and your Quick Notes and on-device display settings (Section 3).
+[UPDATED] Device-specific items that cannot meaningfully be restored on another device are excluded: Android permission grants, notification scheduling artifacts, first-run progress, your app-lock settings, your on-device display settings and My Companion details (Section 3), and your Pro purchase information (Section 9.1).
 
 Where a backup is saved. On supported Android versions, Next Transfer writes the backup directly to your device's user-visible Downloads folder using Android's MediaStore interface. This requires no storage permission and does not give Next Transfer access to other files on your device. If your Android version cannot write there without a broad storage permission, Next Transfer instead asks you to choose a destination using Android's system file picker.
 
@@ -134,7 +144,7 @@ What this means about storage providers. The destination you choose may be a clo
 
 Next Transfer does not automatically upload backup files to our servers. When you choose a location for a backup, the selected storage provider may store or process that file according to its own terms and privacy policy.
 
-Encryption. Portable Next Transfer backup files (.ntbackup) are not encrypted. Anyone who gains access to a backup file may be able to read the information it contains. Backup files include an integrity hash so that a damaged or altered file is rejected, but an integrity hash is not encryption. Store backup files somewhere you consider secure, and treat them as you would treat the application itself.
+Encryption. Portable Next Transfer backup files (.ntbackup) are not encrypted. Anyone who gains access to a backup file may be able to read the information it contains. Backup files include an integrity hash so that a damaged or altered file is rejected, but an integrity hash is not encryption. Store backup files somewhere you consider secure, and treat them as you would treat the application itself. [NEW] The app shows this warning before your first backup on a phone.
 
 Separate recovery checkpoint. Before applying a restore, Next Transfer creates a temporary recovery checkpoint of your current local data. That checkpoint is stored in Next Transfer's private application storage, is protected with AES-256-GCM using a key held in Android's secure storage on that device, and is never written to a user document, exported, or uploaded. It exists only so a restore can be undone locally.
 
@@ -148,18 +158,31 @@ Next Transfer disables Android's automatic application backup. Your Next Transfe
 
 9. Data Transmission and Cloud Behavior
 
-Without an account. If you do not sign in, Next Transfer does not transmit your planner records, contacts, journal, notes, or saved locations to Planward Labs. The application still uses the network for Google Maps and the Google Play update check (Section 10) [UPDATED], and when you personally open another app or website, or send a file or message to another application.
+Without an account. If you do not sign in, Next Transfer does not transmit your planner records, contacts, journal, notes, or saved locations to Planward Labs. The application still uses the network for Google Maps and the Google Play update check (Section 10), and when you personally open another app or website, or send a file or message to another application.
 
-Sign in with Google (optional). You can sign in with your Google account to use Google Sync. Sign-in uses Google's own account chooser. Next Transfer receives your Google account email address and the basic profile information Google shares at sign-in, and uses it only to identify your account and show which account is signed in. Next Transfer never receives your Google password.
+Sign in with Google (optional). You can sign in with your Google account to use Google Sync [UPDATED] and Next Transfer Pro. Sign-in uses Google's own account chooser. Next Transfer receives your Google account email address and the basic profile information Google shares at sign-in, and uses it only to identify your account, show which account is signed in, [UPDATED] and check whether your email is on the beta tester list (Section 9.1). Next Transfer never receives your Google password.
 
-Google Sync (optional). When you turn on Sync, Next Transfer uploads a complete copy of your Next Transfer data to a private storage area that only your signed-in account can read. It has the same contents as a backup (Section 7), including your planner records, goals, contacts, saved places, journal entries and preferences. Together with each copy, Next Transfer stores technical details needed to sync safely: version number, size, integrity hashes, the data format version, and a random identifier for each of your devices.
+Google Sync (optional). When you turn on Sync, Next Transfer uploads a copy of your Next Transfer data to a private storage area that only your signed-in account can read. It has the same contents as a backup (Section 7), including your planner records, goals, contacts, saved places and preferences. [UPDATED] Your journal entries and notes are included only on the Pro plan; on the Free plan they stay on your device and in your own backups. Together with each copy, Next Transfer stores technical details needed to sync safely: version number, size, integrity hashes, the data format version, and a random identifier for each of your devices.
 
 When it syncs. Depending on your Automatic sync setting: a few minutes after you make changes, when you leave the app, overnight while the app is closed, or on a schedule you choose. You can choose "Manual only" and "Wi-Fi only" in the Sync screen. If nothing has changed since your last cloud version, no new copy is uploaded.
-Versions kept. On the Free plan (including the beta), your 3 most recent cloud versions are kept and older versions are removed automatically. If you use more than one phone, a version another of your phones is still using is kept until that phone syncs again.
-Never uploaded. Your MPIN, app-lock settings, sign-in tokens, Android permission grants, notification scheduling data, Quick Notes, and on-device display settings are never included.
+Versions kept. [UPDATED] Your 3 most recent cloud versions are kept and older versions are removed automatically. If you use more than one phone, a version another of your phones is still using is kept until that phone syncs again.
+Never uploaded. Your MPIN, app-lock settings, sign-in tokens, Android permission grants, notification scheduling data, on-device display settings [UPDATED], My Companion details and, on the Free plan, your journal entries and notes are never included.
 Encryption. Data is transmitted over encrypted connections (HTTPS/TLS) and stored by our cloud provider with provider-side encryption at rest. Google Sync is not end-to-end encrypted.
 Access. Server rules restrict each account's rows and files to that signed-in account. Planward Labs does not use your synced data for advertising or analytics and does not sell it.
 Signing out stops syncing on that device. It does not delete your local data or your cloud copies.
+
+[NEW] 9.1 Next Transfer Pro (optional subscription)
+
+Next Transfer Pro is an optional monthly or yearly subscription. Everything you need to plan stays free.
+
+Buying. You buy, change or cancel Pro through Google Play. Google Play processes the payment under its own terms and the Google Privacy Policy. Planward Labs never receives your card number, bank details or billing address.
+Signing in is required. Pro belongs to your signed-in Next Transfer account. When you buy, the app gives Google Play a one-way code made from your account identifier (a SHA-256 hash), so the purchase is tied to your account and cannot be shared with another account. This code does not reveal your email.
+Checking the purchase. After you buy or restore, the app sends the purchase details Google Play gave it (the plan and a purchase token) to our server. Our server asks Google Play directly whether the purchase is real, for this app, and tied to your account, and confirms it with Google Play.
+What we keep. For each account with Pro, our server keeps a small record: your account identifier, where your Pro comes from (a Play subscription or a beta gift), the plan, its status (for example active, in grace period, on hold, cancelled or expired), the date it ends, when it was last checked, and a one-way hash of the purchase token. The purchase token itself is not stored. You can read only your own record.
+On your phone. The app keeps a copy of the last answer about your Pro in private storage on your phone, per account, so Pro keeps working offline until shortly after your plan's paid-until date. It is not included in backups or Sync.
+Signed out. If you sign out, Pro is paused on that phone (not lost): your extra goals stay visible, but Pro features stop until you sign back in with the account that has Pro.
+Beta testers. During the closed beta, Planward Labs keeps a list of beta testers' email addresses (the address you joined the beta with). When you sign in, our server compares your account email with that list and, if it matches, gives your account free Pro for the period stated in the app. The list is used for nothing else.
+Refunds and cancellations. Refunds and cancellations are handled by Google Play. Your Pro record is updated the next time the app checks your purchase.
 
 10. Third-Party Services
 
@@ -169,9 +192,11 @@ Google states that the Maps SDK for Android may collect or process technical inf
 Depending on how map functionality is used, this may also include map interaction data such as panning or zooming.
 Planward Labs does not control Google's independent collection, processing, retention, or use of that information. See the Google Privacy Policy and the Google Maps/Google Earth Additional Terms.
 
-[NEW] Google Play (app updates). When you open Next Transfer, the app asks Google Play on your device whether a newer version is available, so it can offer to update. If you choose to update, Google Play downloads and installs it. This check is handled by Google Play under the Google Privacy Policy. Next Transfer receives only whether an update is available and its progress; it sends none of your Next Transfer data.
+Google Play (app updates). [UPDATED] When you open Next Transfer, and about every 15 minutes while it stays open, the app asks Google Play on your device whether a newer version is available, so it can offer to update. If you choose to update, Google Play downloads and installs it. This check is handled by Google Play under the Google Privacy Policy. Next Transfer receives only whether an update is available and its progress; it sends none of your Next Transfer data.
 
-Supabase (cloud provider for Google Sync). If you sign in and use Google Sync, your account and your synced copies are stored and processed by Supabase, which provides the authentication, database and file-storage services behind Sync, on behalf of Planward Labs. See the Supabase Privacy Policy.
+[NEW] Google Play (billing). Pro subscriptions are bought through Google Play Billing on your device. Our server uses the Google Play Developer API to check and confirm your purchase (Section 9.1). Google processes your payment and purchase history under the Google Privacy Policy.
+
+Supabase (cloud provider). If you sign in, your account, your synced copies [UPDATED] and your Pro record are stored and processed by Supabase, which provides the authentication, database, file-storage and server-function services behind Sync and Pro, on behalf of Planward Labs. See the Supabase Privacy Policy.
 
 Google Sign-In. If you sign in, Google authenticates you and shares your account email and basic profile with Next Transfer under the Google Privacy Policy.
 
@@ -183,7 +208,7 @@ Social profiles you open. When you tap a social profile saved on a contact (for 
 
 Other apps in Home Resources. Home Resources can open other apps you choose, such as Gospel Library, Member Tools, or FamilySearch Tree, or their Google Play page if they are not installed. Next Transfer shares no information with those apps; it only asks Android to open them. Those apps are provided by their own publishers under their own policies.
 
-[NEW] Temple information and temple pages.
+Temple information and temple pages.
 
 Temple names, status and locations shown on the map come from Wikipedia contributors (CC BY-SA 4.0) and OpenStreetMap contributors (ODbL). This information is built into the app, and using it sends no data about you.
 When you tap Directions, the temple's location is passed to the navigation app you use.
@@ -212,9 +237,9 @@ Because app-lock settings stay on the device, they are not restored onto a new p
 
 Because Next Transfer stores information locally, your information generally remains on your device according to the lifecycle of each record. Depending on the type, records may be edited, completed, archived, cancelled, merged, or deleted using the controls available in each feature. Reminder schedules associated with a record are updated or removed when the record or your reminder settings change.
 
-Quick Notes are deleted automatically 10 days after they are written, whether or not you converted them.
+[UPDATED] Notes are kept until you delete them.
 
-[NEW] The Temple Visit Life Goal is a permanent goal and cannot be deleted inside the app. You can rename it. Its records stay on your device and are removed with the rest of your data in the ways below.
+The Temple Visit Life Goal is a permanent goal and cannot be deleted inside the app. You can rename it. Its records stay on your device and are removed with the rest of your data in the ways below.
 
 You can remove your data by:
 
@@ -226,13 +251,15 @@ Files you created and saved yourself are not removed by uninstalling the applica
 
 Cloud copies and your account. If you used Google Sync, your 3 most recent cloud versions are kept and older versions are removed automatically (Section 9).
 
-In the app: you can delete your Next Transfer account and all of your cloud copies at any time (Settings → Account → Delete account & cloud data). This happens immediately and cannot be undone.
+In the app: you can delete your Next Transfer account and all of your cloud copies at any time (Settings → Account → Delete account & cloud data). This happens immediately and cannot be undone. [NEW] Your Pro record is deleted with your account.
 By email, if you no longer have the app: write to next.transfer.app@gmail.com from the Google account you signed in with. Email requests are completed within 30 days and confirmed by email. Step-by-step instructions are on our account deletion page.
 Your devices: deleting your account does not delete the data on your devices; remove that as described above.
+[NEW] Subscriptions: deleting your account or uninstalling the app does not cancel a Pro subscription. Cancel it in Google Play (Payments & subscriptions → Subscriptions). Google keeps its own record of your purchases under the Google Privacy Policy.
+[NEW] Beta tester list: the beta email list is kept while the beta and its launch offer last, then deleted. You can ask us to remove your email at any time.
 
 14. Security
 
-Next Transfer stores information in private application storage protected by Android's application sandbox and, on supported devices, by device encryption. The optional Biometrics and MPIN app locks add a further barrier against casual access to the application. If you use Google Sync, your data is transmitted over encrypted connections and protected in the cloud by provider-side encryption at rest and by access rules that limit each account to its own data. The temporary recovery checkpoint is encrypted as described in Section 7.
+Next Transfer stores information in private application storage protected by Android's application sandbox and, on supported devices, by device encryption. The optional Biometrics and MPIN app locks add a further barrier against casual access to the application. If you use Google Sync, your data is transmitted over encrypted connections and protected in the cloud by provider-side encryption at rest and by access rules that limit each account to its own data. The temporary recovery checkpoint is encrypted as described in Section 7. [NEW] Purchases are checked by our server directly with Google Play, and purchase tokens are kept only as one-way hashes.
 
 This policy does not claim that:
 
@@ -253,9 +280,11 @@ Decline or revoke any Android permission at any time in Android settings; the re
 Hide notification content using the privacy setting inside Next Transfer.
 Use Next Transfer without an account, or sign in and turn Google Sync on or off at any time; choose "Manual only" or "Wi-Fi only" in the Sync screen.
 Sign out at any time, and delete your account and cloud copies from inside the app or by email (Section 13).
-Delete Quick Notes at any time, or let them expire after 10 days.
-[NEW] Turn the temple map on or off, choose which temples it shows, and choose whether search includes temples.
-[NEW] Choose "Install later" when an update is offered, or manage updates in Google Play.
+[UPDATED] Delete notes at any time.
+Turn the temple map on or off, choose which temples it shows, and choose whether search includes temples.
+Choose "Install later" when an update is offered, or manage updates in Google Play.
+[NEW] Use Next Transfer on the Free plan, or subscribe to Pro and manage or cancel your subscription in Google Play at any time.
+[NEW] Turn the weekly backup reminder and the Pro look on or off.
 Export or delete your data yourself, including removing backups you created.
 Send a backup file to another device or storage location of your choosing.
 
