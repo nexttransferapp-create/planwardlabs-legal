@@ -1,4 +1,4 @@
-﻿# Planward Labs â€” Legal & Support
+Planward Labs | Legal & Support
 
 Public web pages for Planward Labs legal, privacy, and support information, published via GitHub Pages.
 
