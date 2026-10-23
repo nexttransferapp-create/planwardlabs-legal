@@ -1,15 +1,15 @@
 Planward Labs
 
 Next Transfer Privacy Policy
-Effective Date: October 20, 2026
+Effective Date: October 23, 2026
 
-Last Updated: October 20, 2026
+Last Updated: October 23, 2026
 
 Developer: Planward Labs
 
 Application: Next Transfer for Android (com.nexttransfer.rmplanner)
 
-Applies to: version 0.2.9 and later, until this policy is updated
+Applies to: version 0.3.1 and later, until this policy is updated
 
 Privacy & Support: next.transfer.app@gmail.com
 
@@ -24,8 +24,10 @@ This Privacy Policy explains what Next Transfer accesses, what it stores, where 
 Next Transfer is a local-first application. Your planner database lives in private application storage on your own device.
 An online account is optional. If you choose to sign in with Google and turn on Google Sync, a copy of your Next Transfer data is stored in a private cloud area that belongs to your account, so you can sync and restore it (Section 9). If you never sign in, nothing leaves your device for Sync.
 You can delete your account and all of your cloud data at any time from inside the app (Section 13).
-Next Transfer contains no advertising, no analytics, and no crash-reporting service.
+Next Transfer contains no advertising, no analytics, and no crash-reporting service. If you choose to read a Canvas link from a screenshot, Google ML Kit reads it on your phone and may send Google basic diagnostics (Section 10).
 Planward Labs does not sell your information.
+Optional connections, all part of Next Transfer Pro and all read-only: your phone's calendar (Keep in sync), your Google Calendar, and your school's Canvas LMS. Events and tasks they bring in become normal Planner records. Your Canvas link, Canvas access token and Canvas grades stay on your phone (Sections 4.3 to 4.5).
+You can choose a profile picture. If you use your own photo, it is shrunk, camera details such as location are removed, and it is included in your Google Sync copy so it shows on your other phones (Section 3).
 Next Transfer can request optional access to contacts, your phone calendar, location, and notifications for specific features you choose to use. Each is requested only when the related feature is used.
 Backup & Restore lets you create a copy of your Next Transfer data and save it to a location you choose. Portable backup files are not encrypted — see Section 7.
 Your MPIN, your app-lock settings and your sign-in tokens never leave your device and are never included in backups or Sync (Section 12).
@@ -56,6 +58,8 @@ Notes. Notes (formerly Quick Notes) are kept until you delete them, like your Jo
 
 My Companion details. The role, phone number and email address you enter in My Companion are kept in Next Transfer's private storage on this phone only. They are not included in backups or Google Sync, and they are not shared with anyone. (Companion Sync, which would share them with one person you choose, is not available yet; this policy will be updated before it is.)
 
+Profile picture. You can choose one of the built-in pictures, your Google account picture, your own photo, or none. Your own photo is chosen with Android's photo picker or taken with your camera app; Next Transfer does not ask for photo, storage or camera permission. The app shrinks the photo (at most 512 pixels, usually under 150 KB) and removes camera details such as GPS location, camera model and time before keeping it. It is kept in Next Transfer's private storage on this phone. If you use Google Sync, your photo and your picture choice are included in your cloud copy, on the Free and Pro plans, so your picture is the same on your phones (Section 9). They are not included in backup files (Section 7). If you choose your Google account picture, the app loads it from Google when it is shown.
+
 On-device display settings. Next Transfer keeps a few small settings on your device, such as:
 
 which Home sections you collapsed;
@@ -64,8 +68,10 @@ which Guides tips you have completed;
 your temple map choices (show temples, which region, include temples in search);
 your Pro look choices for Life Goal cards;
 whether the weekly backup reminder is on, and the date of the last backup made on this phone;
-which in-app messages you have read.
-They contain no planner content and are never synced or backed up.
+which in-app messages you have read;
+your opening animation and Home banner choices;
+the date Next Transfer was installed on this phone, read from Android to show the Welcome card during your first day (it is not stored or sent anywhere).
+They contain no planner content and are never synced or backed up. Your profile picture is the one exception described above.
 
 4. Information Next Transfer Accesses From Your Device
 4.1 Contacts
@@ -86,30 +92,70 @@ Next Transfer does not request background location permission and does not track
 Your current location is used to perform the action you asked for. It is not automatically converted into a saved location unless you separately choose to save it.
 Coordinates you deliberately save or associate with a record are stored locally inside Next Transfer.
 Temple map. Next Transfer includes a built-in list of temple locations. To show temples in your country or nearby, and to list your country's temples first when you choose a temple for an event, the app compares your device location with that list on your phone. Your location is not sent to Planward Labs or anyone else for this. If location access is not allowed, the app uses the region you chose instead.
-4.3 Phone calendar
-Next Transfer includes an optional feature for importing events from your phone's calendar (Planner → Import from phone calendar).
+4.3 Phone calendar sync
+Next Transfer includes an optional Phone calendar feature (Calendars & imports → Phone calendar) with two choices: Import once, and Keep in sync. From version 0.3.1, Keep in sync is part of Next Transfer Pro; Import once stays free.
 
 The feature is initiated by you. Next Transfer asks Android for calendar access only when you open it.
 Access is read-only. Next Transfer never adds, changes, or deletes anything in your phone's calendar.
-Only calendars you own or can edit are listed, so holiday, birthday and subscribed calendars do not appear. You choose which calendars and which date range to import.
-For the events you import, Next Transfer reads the title, start and end time, all-day flag, description, location, and repeat rules, and saves them as Next Transfer calendar events. From then on they are handled like any other event you create (Sections 3, 7 and 9).
-The calendar data is read on your phone. It is not sent to Planward Labs, except as part of your own Google Sync copy if you turned Sync on.
+You choose which calendars to use. Read-only calendars, such as holidays, are listed but not selected unless you pick them. To let you choose, Next Transfer shows the name of each calendar and the account it belongs to; those names are used on your phone only.
+For the events it reads, Next Transfer reads the title, start and end time, all-day flag, description, location, repeat rules and the calendar's account type (so it can show where an event came from), and saves them as Next Transfer calendar events. From then on they are handled like any other event you create (Sections 3, 7 and 9).
+Import once copies the events one time. Keep in sync also checks your chosen calendars when you open the app and in the background about once a day (overnight), adding new events and updating changed ones. An event deleted in your phone calendar is marked Cancelled in Next Transfer, never deleted. Events you edit in Next Transfer are not overwritten.
+The calendar data is read on your phone. It is not sent to Planward Labs, except as part of your own backups and Google Sync copy if you use them.
+You can turn Keep in sync off at any time, and Android lets you remove calendar access in your phone's settings. Events already copied stay in your Planner until you delete them. If your Pro plan ends, Keep in sync continues for up to 7 days, then stops; nothing already copied is deleted.
 You can use the Planner and all other features without granting calendar access.
+4.4 Google Calendar (optional, when available)
+Next Transfer can optionally connect to your Google Calendar so your Google Calendar events show in your Planner.
+
+The connection is started by you, and Google asks for your permission on its own screen. You can decline.
+Access is read-only (Google's calendar.readonly permission). Next Transfer never creates, changes, or deletes anything in your Google Calendar.
+Google Calendar is part of Next Transfer Pro. It checks your chosen calendars when you open the app or tap Refresh, at most every 15 minutes; it does not run in the background. The Google account you connect and the calendars you pick are remembered on this phone only and are not included in backups or Google Sync. The access Google gives the app is kept in memory only while it checks. If your Pro plan ends, Google Calendar stops checking; events already added stay in your Planner.
+Next Transfer reads the event title, start and end time, all-day flag, description, location, and repeat rules for the calendars you choose, and shows them as events in your Planner.
+The calendar data is read on your phone. Events it reads become normal Planner events, so they are included in your own backups and your Google Sync copy if you use them. They are not sent to Planward Labs or anyone else otherwise, and are not used for advertising, sold, or used to train AI models.
+You can disconnect at any time inside Next Transfer. Disconnecting stops the checks and forgets the connected account; events already added stay in your Planner until you delete them. To remove Next Transfer's access completely, also remove it in your Google Account at myaccount.google.com/permissions.
+Next Transfer's use and transfer of information received from Google APIs will adhere to the Google API Services User Data Policy, including the Limited Use requirements.
+
+4.5 Canvas LMS (optional, Pro)
+Next Transfer can optionally bring your school's Canvas LMS classes and assignments into your Planner. It only reads from Canvas; it never changes anything in Canvas.
+
+Calendar feed link. You can paste your Canvas calendar feed link (or read it from a screenshot, below). The link works like a password: it is kept only in your phone's secure storage, is shown only as your school's address, is never included in backups or Google Sync, and is never sent to Planward Labs. Next Transfer downloads the feed directly from the address in the link (your school's Canvas server), when you open the app, when you tap Refresh, and about once a day in the background (overnight, when the phone has a connection). For each class event and assignment in the feed, Next Transfer copies the title, the date and time, the description, the location and the item's Canvas web address. Classes become Planner events and assignments become tasks, which are then handled like any other event or task you create, including your backups and Google Sync copy (Sections 3, 7 and 9).
+
+Access token (optional). If you also add a Canvas access token, Next Transfer uses it to read more information from your school's Canvas. The token is sent only to the Canvas address you enter (your school's). It is never sent to Planward Labs, never put in a backup (on the phone or in the cloud), never written to logs, and never shown in full. It is kept in your phone's secure storage. The token is used only while the app is open, at most about once an hour, and only for three read-only requests: your active courses, the assignments of those courses with your own submission, and recent announcements.
+
+What the token reads and keeps on this phone: your course names with your current score and grade; your assignment names with their due dates, your submission status (submitted, late, missing) and your score; and the titles and dates of recent course announcements. Announcement messages and other people's names are not kept. The submission status (Submitted, Late, Missing) is shown next to the matching task; it does not change the task itself.
+
+Where: in a private file of the app on this phone. That file is not encrypted by the app (it is protected by your phone's app sandbox and lock). It is never synced, never put in a backup and never sent to Planward Labs.
+
+How long: it stays until you remove it. Signing out of your Next Transfer account or deleting your cloud account does not remove it (data on your phone is kept by design). Ending Pro does not remove it either.
+
+How to remove it: tap "Remove token" (or "Remove Canvas token and data", which is available even without Pro), or uninstall the app. This deletes the token and everything it read from this phone. Please also delete the token in Canvas (Account → Settings). If the token expires or is deleted in Canvas, Next Transfer stops using it and asks for a new one.
+
+Reading the link from a screenshot (optional, from version 0.3.1). If the link cannot be copied, you can choose a screenshot of it instead. Next Transfer reads the text in that picture on your phone using Google ML Kit (Section 10), finds the Canvas link, and shows it to you to check before it is saved. The picture and the text read from it never leave your phone and are not saved or backed up; the temporary copy is deleted right after reading. The link you confirm is kept like a pasted link.
+
+Removing the feed link stops syncing; events and tasks already added stay in your Planner until you delete them. If your Pro plan ends, the access token is no longer used, and the feed keeps syncing for up to 7 days, then stops; nothing already added is deleted.
+
+4.6 Import from BetterCalendar (optional)
+If you used BetterCalendar, you can import its backup file (Import from BetterCalendar; free).
+
+You choose the file with Android's file picker. Next Transfer reads only that file, on your phone, and shows you what it found before anything is added.
+It reads events (title, date and time, all-day flag, location, notes, colour, repeat rule, reminder time, event type and attendees), tasks (title, due date, priority, completed flag, notes and tags), contacts (name, phone number, email, notes and favourite) and your custom event type names and time zone. Any Canvas address or token in the file is ignored.
+The file itself is not saved or sent anywhere. What you import becomes normal Next Transfer records, handled like any other (Sections 3, 7 and 9). The file stays where you saved it; delete it yourself if you no longer need it.
 5. Device Permissions
 The current Android version of Next Transfer declares the following permissions, each tied to a specific feature:
 
-Internet: load Google Maps map content, sign in with Google, run Google Sync when you turn it on, check Google Play for app updates, and verify a Pro purchase.
+Internet: load Google Maps map content, sign in with Google, run Google Sync when you turn it on, check Google Play for app updates, verify a Pro purchase, and, only if you use them, read your Google Calendar, download your Canvas feed and Canvas information from your school's Canvas server, and show your Google account picture.
 Contacts: import device contacts when you choose to use the import feature.
-Calendar (read only): import events from your phone's calendar when you choose to use the import feature.
+Calendar (read only): import events from your phone's calendar, and, if you turn on Keep in sync, check your chosen calendars when you open the app and about once a day in the background.
 Approximate and precise location: foreground location for user-initiated actions such as Locate me, and to choose which temples to show on the map. No background location.
 Notifications: display local reminders and notifications on Android versions that require permission.
 Biometric/device authentication: support the optional Biometrics app lock, and confirm it is you when resetting a forgotten MPIN, through your device's own authentication.
 Network state: respect the "Wi-Fi only" Sync setting by checking whether you are on Wi-Fi or mobile data.
-Boot completion and background work: restore eligible local reminder schedules after your device restarts or the clock or time zone changes, and run the optional nightly Google Sync while the app is closed.
+Boot completion and background work: restore eligible local reminder schedules after your device restarts or the clock or time zone changes, and run the optional overnight jobs you turned on: Google Sync, phone calendar Keep in sync, and the Canvas feed refresh.
 Google Play billing: buy, change or restore a Next Transfer Pro subscription through Google Play.
 Next Transfer does not request broad storage access. Saving a backup on supported Android versions happens without any storage permission (see Section 7).
 
-To open another app you choose (for example a messaging app or Gospel Library), Next Transfer asks Android only whether that specific app is installed. It does not read the list of apps on your device.
+Choosing a photo or screenshot uses Android's system photo picker, and taking a profile photo uses your camera app. Next Transfer does not request photo, media, storage or camera permission.
+
+To open another app you choose (for example a messaging app or Gospel Library), Next Transfer asks Android only whether that specific app is installed. When you select text, Android may also list apps that can work with selected text (for example a translator). Next Transfer does not read the list of apps on your device.
 
 Permission-dependent features are designed to fail softly: declining an optional permission disables the related feature and leaves the rest of Next Transfer usable.
 
@@ -133,7 +179,7 @@ contacts and contact details;
 saved places;
 your journal entries and notes;
 your preferences (including reminder, notification, privacy, and appearance settings).
-Device-specific items that cannot meaningfully be restored on another device are excluded: Android permission grants, notification scheduling artifacts, first-run progress, your app-lock settings, your on-device display settings and My Companion details (Section 3), and your Pro purchase information (Section 9.1).
+Device-specific items that cannot meaningfully be restored on another device are excluded: Android permission grants, notification scheduling artifacts, first-run progress, your app-lock settings, your on-device display settings and My Companion details (Section 3), your Pro purchase information (Section 9.1), your Canvas feed link, Canvas access token and the Canvas information it read, your Google Calendar connection settings, and your profile picture (which is carried by Google Sync instead, Section 9). Events and tasks that came from your phone calendar, Google Calendar, Canvas or a BetterCalendar import are normal records and are included.
 
 Where a backup is saved. On supported Android versions, Next Transfer writes the backup directly to your device's user-visible Downloads folder using Android's MediaStore interface. This requires no storage permission and does not give Next Transfer access to other files on your device. If your Android version cannot write there without a broad storage permission, Next Transfer instead asks you to choose a destination using Android's system file picker.
 
@@ -159,9 +205,11 @@ Sign in with Google (optional). You can sign in with your Google account to use 
 
 Google Sync (optional). When you turn on Sync, Next Transfer uploads a copy of your Next Transfer data to a private storage area that only your signed-in account can read. It has the same contents as a backup (Section 7), including your planner records, goals, contacts, saved places and preferences. Your journal entries and notes are included only on the Pro plan; on the Free plan they stay on your device and in your own backups. Together with each copy, Next Transfer stores technical details needed to sync safely: version number, size, integrity hashes, the data format version, and a random identifier for each of your devices.
 
+Profile picture. Your profile picture choice, and your own photo if you chose one (shrunk, with camera details removed, Section 3), are included in each cloud copy on the Free and Pro plans. If a copy would be too large, the photo is left out.
+
 When it syncs. Depending on your Automatic sync setting: a few minutes after you make changes, when you leave the app, overnight while the app is closed, or on a schedule you choose. You can choose "Manual only" and "Wi-Fi only" in the Sync screen. If nothing has changed since your last cloud version, no new copy is uploaded.
 Versions kept. Your 3 most recent cloud versions are kept and older versions are removed automatically. If you use more than one phone, a version another of your phones is still using is kept until that phone syncs again.
-Never uploaded. Your MPIN, app-lock settings, sign-in tokens, Android permission grants, notification scheduling data, on-device display settings, My Companion details and, on the Free plan, your journal entries and notes are never included.
+Never uploaded. Your MPIN, app-lock settings, sign-in tokens, Android permission grants, notification scheduling data, on-device display settings, My Companion details, your Canvas feed link, Canvas access token and the Canvas grades and information it read, your Google Calendar connection settings and access, any screenshot you read, and, on the Free plan, your journal entries and notes are never included.
 Encryption. Data is transmitted over encrypted connections (HTTPS/TLS) and stored by our cloud provider with provider-side encryption at rest. Google Sync is not end-to-end encrypted.
 Access. Server rules restrict each account's rows and files to that signed-in account. Planward Labs does not use your synced data for advertising or analytics and does not sell it.
 Signing out stops syncing on that device. It does not delete your local data or your cloud copies.
@@ -190,6 +238,14 @@ Google Play (billing). Pro subscriptions are bought through Google Play Billing 
 
 Supabase (cloud provider). If you sign in, your account, your synced copies and your Pro record are stored and processed by Supabase, which provides the authentication, database, file-storage and server-function services behind Sync and Pro, on behalf of Planward Labs. See the Supabase Privacy Policy.
 
+Google Calendar API. Only if you connect Google Calendar (Section 4.4), the app reads your chosen calendars directly from Google (www.googleapis.com) with read-only access, under the Google Privacy Policy. Planward Labs does not receive this access.
+
+Canvas LMS (your school). Only if you use Canvas (Section 4.5), the app contacts your school's Canvas server at the address you entered. Canvas is a product of Instructure, Inc.; your school operates its Canvas site under its own terms and privacy policy, and your school can see that your account's feed link or token was used, as with any app you connect to Canvas. Planward Labs does not receive your Canvas link, token or information.
+
+Your Google account picture. If you choose it as your profile picture, the app loads the image from Google's servers when it is shown.
+
+Google ML Kit (text recognition). Only when you choose to read a Canvas link from a screenshot (Section 4.5), Next Transfer uses Google ML Kit, which reads the text on your phone. Your picture and its text are not sent to Google or to Planward Labs. Google states that ML Kit may send Google basic diagnostics and usage information: device information (manufacturer, model, Android version), app information (package name and version), a per-installation identifier that is not meant to identify you or your device, and performance and configuration details (such as speed, image size and error codes). Google uses this for diagnostics and usage analytics, encrypts it in transit and does not transfer it to third parties. See Google's ML Kit data disclosure and the Google Privacy Policy.
+
 Google Sign-In. If you sign in, Google authenticates you and shares your account email and basic profile with Next Transfer under the Google Privacy Policy.
 
 Android platform services. Android provides the operating-system services Next Transfer relies on for permissions, notification delivery, background scheduling, secure storage, file selection, and device authentication.
@@ -209,10 +265,10 @@ Storage providers you choose. If you save a backup to a cloud-backed destination
 
 11. Analytics, Advertising, and Crash Reporting
 Next Transfer contains no advertising and no advertising SDK, and does not use an advertising identifier for targeted advertising.
-Next Transfer contains no analytics SDK and no crash-reporting SDK. Planward Labs does not operate a behavioral analytics or remote crash-reporting service for this application.
+Next Transfer contains no analytics SDK and no crash-reporting SDK. Planward Labs does not operate a behavioral analytics or remote crash-reporting service for this application. The one exception is outside our control: when you read a Canvas link from a screenshot, Google ML Kit may send Google the basic diagnostics described in Section 10. Planward Labs does not receive that information.
 Guides progress (which tips you have completed) is worked out on your device from your own data and is never sent anywhere.
 Planward Labs does not sell personal information, and does not operate a data-broker business based on information stored in Next Transfer.
-Report a problem. The app keeps a short activity log on your device (about the last 10 minutes, plus the last minutes before the app last closed or crashed): the screens you opened (with record identifiers removed), technical event codes, slow-screen times, and error types with the place in our code where they happened. Error messages, your notes, journal, contacts, names, locations and passwords are never recorded. When you choose Settings > Privacy and Data > Report a problem and tap Create report, the app shows you the whole report, including your phone's maker, model, Android version, memory and free space, the app version, whether you use Free or Pro, and anything you type in "What happened". Nothing is sent automatically: the report leaves your device only if you tap Share report and choose an app (for example email) to send it with. We use reports you send only to find and fix problems. Third-party platform components described in Section 10 may still collect technical diagnostics under their own policies.
+Report a problem. The app keeps a short activity log on your device (about the last 10 minutes, plus the last minutes before the app last closed or crashed): the screens you opened (with record identifiers removed), technical event codes, slow-screen times, and error types with the place in our code where they happened. Error messages, your notes, journal, contacts, names, locations and passwords are never recorded. When you choose Settings > Privacy and Data > Report a problem and tap Create report, the app shows you the whole report, including your phone's maker, model, Android version, memory and free space, the app version, whether you use Free or Pro, anything you type in "What happened", and, only if you turn on "Include background work details", the timing of reminders and background sync jobs. Nothing is sent automatically: the report leaves your device only if you tap Share report and choose an app (for example email) to send it with. We use reports you send only to find and fix problems. Third-party platform components described in Section 10 may still collect technical diagnostics under their own policies.
 12. App Lock: Biometrics and MPIN
 Next Transfer offers two optional app locks, which you can use separately or together:
 
@@ -224,6 +280,12 @@ Because app-lock settings stay on the device, they are not restored onto a new p
 Because Next Transfer stores information locally, your information generally remains on your device according to the lifecycle of each record. Depending on the type, records may be edited, completed, archived, cancelled, merged, or deleted using the controls available in each feature. Reminder schedules associated with a record are updated or removed when the record or your reminder settings change.
 
 Notes are kept until you delete them.
+
+Canvas. Your Canvas feed link, access token and the Canvas information the token read stay on this phone until you remove them ("Remove Canvas token and data", or remove the feed link) or uninstall the app. Signing out, deleting your cloud account, or the end of Pro does not remove them. Events and tasks Canvas added stay in your Planner until you delete them.
+
+Google Calendar and phone calendar. Disconnecting or turning sync off stops reading; events already added stay until you delete them.
+
+Profile picture. Removing your photo removes it from this phone, and the next Google Sync copy no longer contains it. Older cloud copies that still contain it are replaced as new copies are made (your 3 most recent are kept), and all of them are deleted at once when you delete your account.
 
 The Temple Visit Life Goal is a permanent goal and cannot be deleted inside the app. You can rename it. Its records stay on your device and are removed with the rest of your data in the ways below.
 
@@ -267,6 +329,8 @@ Use Next Transfer on the Free plan, or subscribe to Pro and manage or cancel you
 Turn the weekly backup reminder and the Pro look on or off.
 Export or delete your data yourself, including removing backups you created.
 Send a backup file to another device or storage location of your choosing.
+Connect or disconnect Google Calendar, Canvas and phone calendar Keep in sync at any time, and remove your Canvas token and data even without Pro.
+Use a built-in profile picture, your Google picture, your own photo, or none, and change or remove it at any time.
 17. Changes to This Privacy Policy
 We may update this Privacy Policy when Next Transfer's features, technologies, services, or legal requirements change. When material changes are made, the Effective Date and Last Updated date at the top of this page are revised. Continued use of Next Transfer after an update means the updated policy applies to you.
 
